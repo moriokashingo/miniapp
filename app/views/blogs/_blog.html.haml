@@ -5,14 +5,20 @@
         .daimei
         タイトル:
         - if blog.title.present?
-          = blog.title.truncate(18)
+          - unless action_name == "show"
+            = blog.title.truncate(18)
+          - else
+            = blog.title
         -else
           無題
 
 
         .naiyou
         内容:
-        = blog.content.truncate(30)
+        - unless action_name == "show" 
+          = blog.content.truncate(30)
+        - else
+          = blog.content
 
         .namae 
           %span 投稿者
