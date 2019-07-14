@@ -1,0 +1,35 @@
+%nav
+  .nav-wrapper.yellow.darken-4
+    %a.brand-logo{:href => "#"} BLOGS
+    - if user_signed_in?
+      %ul#nav-mobile.right.hide-on-med-and-down
+        %li
+          - if action_name == "show"
+            .home
+              = link_to "/blogs",class: 'waves-effect.waves-light btn', method: :get do
+                %i.material-icons.left> home
+                allblogs
+          - else
+            .none
+        %li
+          %span ログイン中
+          = current_user.name 
+          さん
+        %li
+          = link_to "NEW POST", new_blog_path, method: :get
+        %li
+          = link_to "SIGN OUT", destroy_user_session_path, method: :delete
+    - else
+      %ul#nav-mobile.right.hide-on-med-and-down
+        %li
+          - if action_name == "show"
+            .home
+              = link_to "/blogs",class: 'waves-effect.waves-light btn', method: :get do
+                %i.material-icons.left> home
+                allblogs
+          - else
+            .none
+        %li
+          = link_to "SIGN IN", user_session_path, method: :get
+        %li
+          = link_to "SIGN UP", new_user_registration_path, method: :get

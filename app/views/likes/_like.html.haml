@@ -1,0 +1,17 @@
+- if user_signed_in?
+  .like-link{:id => "like-link-#{blog.id}"}
+    - if blog.likes.find_by(user_id: current_user.id)
+      = link_to unlike_path(blog.id), method: :delete, remote: true do
+        .iine__button
+          ❤️#{blog.likes.count}
+    - else
+      = link_to like_path(blog.id), method: :post, remote: true do
+        .iine__button
+          ♡️#{blog.likes.count}
+- else
+  - if blog.likes_count.nil?
+    .iine__button
+      ♡️#{blog.likes.count}
+  - else
+    .iine__button
+      ❤#{blog.likes.count}

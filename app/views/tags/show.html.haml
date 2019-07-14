@@ -1,0 +1,12 @@
+= render partial: "blogs/header"
+.chip.chip_title
+  = @name 
+  の投稿一覧
+
+
+.contents.row
+  - if @blogs.present?
+    - @blogs.each do |blog|
+      = render partial: "blogs/blog", locals: { blog: blog }
+  - else
+    まだ投稿はありません

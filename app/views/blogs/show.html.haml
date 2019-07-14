@@ -1,0 +1,39 @@
+= render partial: "header"
+
+
+= render partial: 'blog', locals: { blog: @blog }
+
+
+
+-# .row
+-#   .col.s12.m6.offset-m3
+-#     .card
+-#       .card-content.deep-orange-text
+-#         .daimei
+-#         タイトル:
+-#         - if @blog.title.present?
+-#           = @blog.title.truncate(18)
+-#         -else
+-#           無題
+-#         .naiyou
+-#         内容:
+-#         = @blog.content.truncate(30)
+-#         .namae 
+-#           %span 投稿者
+-#           = @blog.user.name
+-#         .tagu
+-#         - if @blog.tags.present?
+-#           - @blog.tags.each do |tag|
+-#             .chip
+-#               = tag.name
+-#               %i.close.material-icons close
+-#       .card-action
+-#         - if user_signed_in? && current_user.id == @blog.user_id
+-#           %ul.user_more_list
+-#             %li.lili
+-#               = link_to '編集', "/blogs/#{@blog.id}/edit", class: "btn btn-dark btn-sm ", method: :get
+                
+-#             %li.lili
+-#               = link_to '削除', "/blogs/#{@blog.id}",class: "btn btn-dark btn-sm ", method: :delete
+
+

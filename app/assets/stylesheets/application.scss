@@ -1,0 +1,46 @@
+
+
+// form
+ul.more_list {
+  display: flex;
+  justify-content:space-between;
+}
+
+.lili{
+  display:flex;
+}
+
+
+.daimei{
+  font-size:50px;
+}
+
+.niyou{
+  font-size: 20px;
+}
+
+.namae{
+  color:#BBBBBB !important
+}
+
+ul.user_more_list{
+  display:flex;
+
+} 
+
+.iine__button{
+  background: linear-gradient(to right, #feb400, #FFE300);
+  line-height: 42px;
+  color: #6d3701;
+  font-size: 14px;
+  display: inline-block;
+  padding: 0 18px;
+  border-radius: 100px;
+  font-weight: bold;
+}
+
+
+.chip.chip_title{
+  display:block;
+  text-align: center;
+}

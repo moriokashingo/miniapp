@@ -1,0 +1,19 @@
+<div>
+  <%= form_for [@blog] do |f| %>
+      <%= f.text_area :title, placeholder: 'タイトルを入力してください。' %>  
+      <%= f.text_area :content, placeholder: 'blogの内容を入力してください。' %>
+      <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %>
+        <%= button_tag type: "submit", class: "btn btn--block" do %>
+        投稿する</i> 
+         <% end %> 
+  <% end %>
+
+
+
+    <%= form_for [@tag] do |f| %>
+    <%= f.text_area :name, placeholder: '新規タグ作成' %> 
+    <%= button_tag type: "submit", class: "btn btn--block" do %>
+        新しいタグを作る</i>
+     <% end %>
+  <% end %>
+</div>

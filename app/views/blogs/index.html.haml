@@ -1,0 +1,86 @@
+%body
+  = render partial: "header"
+
+
+
+  %contents
+    - @blogs.each do |blog|
+      = render partial: "blog", locals: { blog: blog }
+  
+
+    
+  .progress
+    .indeterminate
+
+  = paginate(@blogs)
+
+
+
+
+
+  -#     %a.waves-effect.waves-light.btn-large{:href => "#!"} Wave
+  -#     %a.btn.waves-effect.waves{:href => "#!"} Send
+  -#     %ul.collapsible.popout{"data-collapsible" => "accordion"}
+  -#       %li.a aaaaaa
+
+
+  -#   .circle1
+  -#     .preloader-wrapper.big.active
+  -#       .spinner-layer.spinner-blue
+  -#         .circle-clipper.left
+  -#           .circle
+  -#         .gap-patch
+  -#           .circle
+  -#         .circle-clipper.right
+  -#           .circle
+  -#       .spinner-layer.spinner-red
+  -#         .circle-clipper.left
+  -#           .circle
+  -#         .gap-patch
+  -#           .circle
+  -#         .circle-clipper.right
+  -#           .circle
+  -#       .spinner-layer.spinner-yellow
+  -#         .circle-clipper.left
+  -#           .circle
+  -#         .gap-patch
+  -#           .circle
+  -#         .circle-clipper.right
+  -#           .circle
+  -#       .spinner-layer.spinner-green
+  -#         .circle-clipper.left
+  -#           .circle
+  -#         .gap-patch
+  -#           .circle
+  -#         .circle-clipper.right
+  -#           .circle
+
+
+  -#   .circle2
+  -#     .preloader-wrapper.big.active
+  -#       .spinner-layer.spinner-blue-only
+  -#         .circle-clipper.left
+  -#           .circle
+  -#         .gap-patch
+  -#           .circle
+  -#         .circle-clipper.right
+  -#           .circle
+  -#     .preloader-wrapper.active
+  -#       .spinner-layer.spinner-red-only
+  -#         .circle-clipper.left
+  -#           .circle
+  -#         .gap-patch
+  -#           .circle
+  -#         .circle-clipper.right
+  -#           .circle
+  -#     .preloader-wrapper.small.active
+  -#       .spinner-layer.spinner-green-only
+  -#         .circle-clipper.left
+  -#           .circle
+  -#         .gap-patch
+  -#           .circle
+  -#         .circle-clipper.right
+  -#           .circle
+
+
+  -# %script{:src => "./app.js", :type => "text/javascript"}
